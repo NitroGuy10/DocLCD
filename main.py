@@ -1,5 +1,3 @@
-# http://thepythongamebook.com/en:pygame:start
-# https://coderslegacy.com/python/python-pygame-tutorial/
 import pygame
 # import serial_dummy as serial
 import serial
@@ -85,7 +83,7 @@ def main():
     cursor.serial_clear()
 
     pygame.init()
-    pygame.display.set_caption("EasyChar")
+    pygame.display.set_caption("DocLCD")
 
     clock = pygame.time.Clock()
     framerate = 15
@@ -95,16 +93,10 @@ def main():
     background.fill((200, 200, 200))
     background = background.convert()
 
-    """
-    drawables = []
-    player = player_class.Player((5, 5))
-    drawables.append(player)
-    """
-
     running = True
     print("Ready!")
 
-    # Game Loop
+    # Main Loop
     while running:
         clock.tick(framerate)
         for event in pygame.event.get():
@@ -177,10 +169,6 @@ def main():
                     print("Return!")
 
         screen.blit(background, (0, 0))
-        """
-        for drawable in drawables:
-            screen.blit(drawable.surface, drawable.get_draw_pos())
-        """
 
         pygame.display.flip()
 

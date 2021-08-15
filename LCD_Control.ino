@@ -5,14 +5,14 @@ LiquidCrystal_I2C lcd(0x27, 20, 4);
 /*
  * Pin connections:
  * 
- * RX -> Raspberry Pi TX
- * TX -> Raspberry Pi RX
- * GND -> Raspberry Pi Ground
+ * Ardunio RX -> Raspberry Pi TX
+ * Arduino TX -> Raspberry Pi RX
+ * Arduino GND -> Raspberry Pi Ground
  * 
- * 5V -> LCD VCC
- * GND -> LCD GND
- * A4 -> LCD SDA
- * A5 -> LCD SCL
+ * Arduino 5V -> LCD VCC
+ * Arduino GND -> LCD GND
+ * Arduino A4 -> LCD SDA
+ * Arduino A5 -> LCD SCL
  * 
  */
 
@@ -63,12 +63,5 @@ void loop() {
       lcd.clear();
       lcd.home();
     }
-    // Serial.println(Serial.read());
-    
-    //String incomingString = Serial.readStringUntil('\n');
-    //Serial.println(incomingString);
-    
-
-  //Serial.println(Serial.readString());
   }
 }
